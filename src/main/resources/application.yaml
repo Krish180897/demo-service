@@ -1,0 +1,11 @@
+ktor:
+    development: true
+    application:
+        modules:
+            - example.com.ApplicationKt.module
+    deployment:
+        host: localhost
+        port: 8080
+    mongo:
+        uri: "mongodb+srv://pradeepj:123456789canny@cluster.tmkyfhn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster"
+        database: "demo-service"
