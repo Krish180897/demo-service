@@ -12,13 +12,6 @@ import kotlin.test.*
 class ApplicationTest {
     @Test
     fun testGetUserById() = testApplication {
-//        client.get("/users?id=1").apply {
-//            println(status)
-//            assertEquals(HttpStatusCode.OK, status)
-//            val response = bodyAsText()
-//            val userData = Json.decodeFromString<UserData>(response)
-//            assertEquals(1, userData.id)
-//        }
         val response = client.get("/todos/users?id=1")
         assertEquals(HttpStatusCode.OK, response.status)
         val userData = Json.decodeFromString<UserData>(response.body())
